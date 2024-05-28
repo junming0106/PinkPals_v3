@@ -425,7 +425,7 @@ main {
 }
 
 /* 添加響應式設計 */
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .posts {
     padding: 10px;
   }
@@ -446,7 +446,7 @@ main {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 768px) {
   .posts {
     padding: 10px;
   }
