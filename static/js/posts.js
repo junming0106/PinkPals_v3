@@ -14,8 +14,8 @@ function fetchMessages() {
       if (Array.isArray(data)) {
         // 對消息根據時間戳進行排序
         data.sort((a, b) => {
-          const dateA = a.timestamp ? new Date(a.timestamp.seconds * 1000) : new Date('2024-05-28T10:00:00');
-          const dateB = b.timestamp ? new Date(b.timestamp.seconds * 1000) : new Date('2024-05-28T10:00:00');
+          const dateA = a.timestamp ? new Date(a.timestamp.seconds * 1000) : new Date('2024-05-27T19:00:00');
+          const dateB = b.timestamp ? new Date(b.timestamp.seconds * 1000) : new Date('2024-05-27T19:00:00');
           return dateB - dateA; // 由新到舊排序
         });
         displayMessages(data);
