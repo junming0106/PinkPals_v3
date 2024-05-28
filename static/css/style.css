@@ -438,10 +438,11 @@ main {
   .celebrate {
     padding: 20px;
   }
-
+/*
   .scroll-button.left,
   .scroll-button.right {
-    display: none; /* 隱藏左右按鈕 */
+    display: none; 隱藏左右按鈕 
+*/
   }
 }
 
