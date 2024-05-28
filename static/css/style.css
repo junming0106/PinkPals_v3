@@ -296,7 +296,117 @@ main {
   margin-top: 10px;
 }
 
-/* 添加響應式設計 */
+.posts {
+  text-align: center;
+  background-color: #ffc0cb; /* 櫻花粉色背景 */
+  padding: 50px;
+  border-radius:15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+  position: relative; /* 使子元素相對定位 */
+}
+
+.posts h1 {
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.posts-wrapper {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.posts-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 10px;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+.posts-container::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.scroll-button {
+  background-color: #ea96c0;
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: background-color 0.3s ease;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0; /* 移除內邊距 */
+}
+
+.scroll-button.left {
+  left: -60px; /* 向左移動，確保在紅色框框位置 */
+}
+
+.scroll-button.right {
+  right: -60px; /* 向右移動，確保在紅色框框位置 */
+}
+
+.scroll-button:hover {
+  background-color: #ff1493;
+}
+
+.scroll-button img {
+  width: 20px; /* 調整圖片大小 */
+  height: 20px; /* 調整圖片大小 */
+}
+
+.card {
+  height: 200px;
+  background-color: #fff;
+  border: 2px solid #ff69b4;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-width: 300px;
+  max-width: 300px;
+  flex: 0 0 auto;
+  padding: 20px;
+}
+
+.card-content {
+  text-align: left;
+}
+
+.card-hint {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #ff69b4;
+  margin-bottom: 10px;
+}
+
+.card-message {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.card-timestamp {
+  font-size: 0.8rem;
+  color: #999;
+  margin-top: 10px;
+}
+
 /* 添加響應式設計 */
 @media (max-width: 800px) {
   .posts {
