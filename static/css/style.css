@@ -438,15 +438,15 @@ main {
   .celebrate {
     padding: 20px;
   }
-/*
+
   .scroll-button.left,
   .scroll-button.right {
-    display: none; 隱藏左右按鈕 
-*/
+    display: none;
+     /*隱藏左右按鈕 */
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
   .posts {
     padding: 10px;
   }
