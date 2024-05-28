@@ -320,7 +320,7 @@ main {
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   width: 100%;
-  max-width: 800px;
+  max-width: 750px;
   margin: 0 auto;
   position: relative; /* 使子元素相對定位 */
 }
