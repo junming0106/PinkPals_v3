@@ -297,7 +297,7 @@ main {
 }
 
 /* 添加響應式設計 */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .avatar {
     width: 100%;
     height: auto;
@@ -425,7 +425,7 @@ main {
 }
 
 /* 添加響應式設計 */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .posts {
     padding: 10px;
   }
