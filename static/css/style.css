@@ -425,7 +425,7 @@ main {
 }
 
 /* 添加響應式設計 */
-@media (max-width: 1000px) {
+@media (max-width: 700px) {
   .posts {
     padding: 20px;
   }
