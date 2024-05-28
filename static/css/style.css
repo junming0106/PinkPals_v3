@@ -438,29 +438,12 @@ main {
   .celebrate {
     padding: 20px;
   }
-
+ nav a {
+    padding: 1rem 0.5rem 0 0.5rem;
+  }
   .scroll-button.left,
   .scroll-button.right {
     display: none;
      /*隱藏左右按鈕 */
-  }
-}
-
-@media (max-width: 768px) {
-  .posts {
-    padding: 10px;
-  }
-
-  .card {
-    min-width: 200px;
-    max-width: 200px;
-  }
-
-  .celebrate {
-    padding: 10px;
-  }
-
-  nav a {
-    padding: 1rem 0.5rem 0 0.5rem;
   }
 }
