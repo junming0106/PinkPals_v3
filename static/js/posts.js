@@ -30,7 +30,7 @@ function fetchMessages() {
 
 function formatDate(timestamp) {
   if (!timestamp) {
-    return "05/28 10:00"; // 设置默认时间
+    return "05/27 23:00"; // 设置默认时间
   }
   let date;
   if (timestamp.seconds) {
