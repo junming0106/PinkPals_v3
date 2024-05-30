@@ -14,8 +14,12 @@ function fetchMessages() {
       if (Array.isArray(data)) {
         // 對消息根據時間戳進行排序
         data.sort((a, b) => {
-          const dateA = a.timestamp ? new Date(a.timestamp.seconds * 1000) : new Date('2024-05-27T19:00:00');
-          const dateB = b.timestamp ? new Date(b.timestamp.seconds * 1000) : new Date('2024-05-27T19:00:00');
+          const dateA = a.timestamp
+            ? new Date(a.timestamp.seconds * 1000)
+            : new Date("2024-05-27T19:00:00");
+          const dateB = b.timestamp
+            ? new Date(b.timestamp.seconds * 1000)
+            : new Date("2024-05-27T19:00:00");
           return dateB - dateA; // 由新到舊排序
         });
         displayMessages(data);
@@ -46,11 +50,10 @@ function formatDate(timestamp) {
   const minutes = date.getMinutes().toString().padStart(2, "0");
   return `${month}/${day} ${hours}:${minutes}`;
 }
-
 function displayMessages(messages) {
   const container = document.getElementById("posts-container");
   container.innerHTML = "";
-  messages.forEach((msg) => {
+  messages.forEach((msg, index) => {
     const card = document.createElement("div");
     card.className = "card";
     card.innerHTML = `
@@ -60,8 +63,20 @@ function displayMessages(messages) {
         <p class="card-timestamp">${formatDate(msg.timestamp)}</p>
       </div>
     `;
+    // 添加掉落動畫類
+    setTimeout(() => {
+      card.classList.add("drop");
+    }, index * 100); // 逐個添加動畫，產生掉落效果
     container.appendChild(card);
   });
+
+  // 在動畫結束後恢復水平滾動
+  setTimeout(() => {
+    document.querySelectorAll(".card").forEach((card) => {
+      card.classList.remove("drop");
+      card.style.opacity = "1";
+    });
+  }, messages.length * 1000); // 確保所有動畫都結束後
   initializeScroll();
 }
 
